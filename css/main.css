@@ -388,7 +388,7 @@
 
 /* ------------------------------ LienHe.html ------------------------------ */
 .lienhe{
-    width: 1094px;
+    width: 100%;
     height: 730px;
     margin: 0 auto;
     padding: 50px;
@@ -403,29 +403,63 @@
         font-style: normal;
         text-align: center;
     }
-    .lienhe-table{
+    .lienhe-container{
+        width: 800px;
+        background-color: #f0f0f0;
         margin: 0 auto;
         padding: 50px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         background-color: #f0f0f0;
         border-radius: 10px;
-        td{
-            padding: 10px;
-            textarea, input{
+        
+        .contact-infor{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            .contact-label{
+                min-width: 150px;
+                font-size: 30px;
+            }
+            .contact-input{
                 font-family: "Cal Sans", sans-serif;
                 font-weight: 400;
                 font-style: normal;
-                font-size: 25px;
+                font-size: 20px;
+                padding: 10px;
+                outline: none;
+                resize: none;
+                width: 500px;
+                height: 50px;
+            }
+            textarea{
+                font-family: "Cal Sans", sans-serif;
+                font-weight: 400;
+                font-style: normal;     
+                font-size: 20px;
+                width: 500px;
+                height: 200px;
+                resize: none;
+                padding: 10px;
+                outline: none;
             }
             
         }
-        .button-row{
-            text-align: center;
-            .lienhe-button{
+        .contact-bottom{
+            display: flex;
+            justify-content: center;
+            .contact-btn{
                 width: 100px;
                 height: 50px;
+                font-family: "Bangers", system-ui;
+                font-weight: 400;
+                font-style: normal;
+                font-size: 20px;
+                border-radius: 10px;
+                padding: 10px;
             }
         }
+
     }
 }
 
@@ -505,7 +539,7 @@
     padding: 30px; 
     border-radius: 10px; 
     max-width: 800px;
-    height: 500px;
+    height: auto;
     padding: 30px;
 }
 #popup-title{
@@ -578,6 +612,11 @@
                 transition:
                     transform 0.2s ease,
                     background-color 0.2s ease;
+                a{
+                    display: block;
+                    text-decoration: none;
+                    color: #000;
+                }
             }
             .movie-btn:hover {
                 transform: scale(1.05);
@@ -588,10 +627,10 @@
             .book-btn:hover {
                 background-color: #f4d84a;
             }
-            .details-btn {
+            .details-btn, .trailer-btn {
                 background-color: #ffffff;
             }
-            .details-btn:hover {
+            .details-btn, .trailer-btn:hover {
                 background-color: #f0f0f0;
             }
         }
@@ -930,6 +969,9 @@
     }
     .lienhe{
         width: 100%;
+        .lienhe-container{
+            width: 100%;
+        }
     }
     .giave{
         width: 100%;
@@ -1106,6 +1148,17 @@
     }
     .lienhe{
         width: 100%;
+        .lienhe-container{
+            width: 100%;
+            padding: 10px;
+            .contact-infor{
+                .contact-label{
+                    min-width: 100px;
+                    font-size: 20px;
+                }
+            }
+            
+        }
     }
     .giave{
         padding: 10px 0;
@@ -1120,6 +1173,12 @@
                     width: 90%;
                 }
             }
+        }
+        #popup-title{
+            font-size: 40px;
+        }
+        #popup-description{
+            font-size: 20px;
         }
     }
     .lab-container{

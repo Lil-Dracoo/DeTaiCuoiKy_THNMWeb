@@ -58,41 +58,43 @@
 
         <!-- ------------------------------ LienHe ------------------------------ -->
         <div class="lienhe">
-            <form action="./xlThem.php" method="post">
-                <h2>Hãy liên hệ với chúng tôi qua form dưới đây!</h2>
-                <table class="lienhe-table">
-                    <tr>
-                        <td> Họ Tên: </td>
-                        <td>
-                            <input type="text" name="nmTen" placeholder="Nhập tên của bạn..." style="width: 500px; height: 50px;">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td> Mail: </td>
-                        <td>
-                            <input type="text" name="nmMail" placeholder="Nhập mail của bạn..." style="width: 500px; height: 50px;">
-                        </td>                   
-                    </tr>
-                    <tr>
-                        <td> SĐT: </td>
-                        <td>
-                            <input type="text" name="nmSDT" placeholder="Nhập số điện thoại của bạn..." style="width: 500px; height: 50px;">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td> Nội dung: </td>
-                        <td>
-                            <textarea name="nmNoidung" col="36" rows="9" style="width: 500px; height: 150px; resize: none;" placeholder="Nội dung bạn cần trao đổi..."></textarea>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colspan="2" class="button-row">
-                            <input type="submit" name="nmSend" value="Gửi" class="lienhe-button"/> 
-                            <input type="reset" name="nmReset" value="Xóa" class="lienhe-button"/>
-                        </td>
-                    </tr>
-                </table>
+          <h2>Hãy liên hệ với chúng tôi qua form sau</h2>
+          <div class="lienhe-container">
+            <form id="contact-form" class="frm-contact">
+              <div class="lienhe-row">
+                <div>
+                  <div class="contact-infor">
+                      <label class="contact-label" for="name">Tên: </label>
+                      <input class="contact-input" type="text" name="name" required placeholder="Nhập tên của bạn">
+                  </div>
+                </div>
+                <div>
+                  <div class="contact-infor">
+                      <label class="contact-label" for="phone">SĐT: </label>
+                      <input class="contact-input" type="text" name="phone" required placeholder="+84 123 456 789">
+                  </div>
+                </div>
+                <div>
+                  <div class="contact-infor">
+                      <label class="contact-label" for="email">Email: </label>
+                      <input class="contact-input" type="email" name="email" required placeholder="nguyenvanteo@gmail.com">
+                  </div>
+                </div>
+                <div>
+                  <div class="contact-infor">
+                      <label class="contact-label" for="message">Lời nhắn: </label>
+                      <textarea name="message" rows="10" minlength="20" required placeholder="Lời nhắn"></textarea>
+                  </div>
+                </div>
+              </div>
+              <div class="lienhe-row">
+                  <div class="contact-bottom">
+                    <button type="submit" id="btn-submit" class="contact-btn">Gửi</button>
+                    <button type="reset" id="btn-submit" class="contact-btn">Xóa</button>
+                  </div>
+              </div>
             </form>
+          </div>
         </div>
         <!-- ------------------------------ Footer ------------------------------ -->
         <section class="footer">
