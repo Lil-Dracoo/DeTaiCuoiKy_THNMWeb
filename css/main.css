@@ -256,7 +256,7 @@
 
 /* ------------------------------ Advertisement ------------------------------ */
 .ads{
-    height: 600px;
+    height: auto;
     padding: 0px 50px 50px;
 }
 .ads-container{
@@ -283,6 +283,7 @@
         div{
             display: flex;
             justify-content: center;
+            /* flex-wrap: wrap; */
         }
         img{
             border-radius: 30px;
@@ -448,6 +449,7 @@
         .contact-bottom{
             display: flex;
             justify-content: center;
+            gap: 20px;
             .contact-btn{
                 width: 100px;
                 height: 50px;
@@ -734,10 +736,12 @@
             font-style: normal;
             font-size: 40px;
         }
+        
     }
     .lab-card:hover{
         transform: translateY(-5px);
     }
+    
     .lab-title{
         padding: 10px;
         text-align: center;
@@ -760,6 +764,10 @@
         margin: 10px 0px;
         background-color: white;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        a{
+            text-decoration: none;
+            color: #000;
+        }
     }
     .lab-btn:hover{
         font-weight: bold;
@@ -1029,7 +1037,27 @@
     .movie-grid{
         width: 100%;
     }
-    
+    .ads{
+        .ads-container{
+            height: 100%;
+            a{
+                height: 100%;
+            }
+        }
+        div{
+            flex-wrap: wrap;
+        }
+        nav:first-child{
+            order: 2;
+        }
+        nav:nth-child(2){
+            width: 80%;
+            order: 1;
+        }
+        nav:nth-child(3){
+            order: 3;
+        }
+    }
     .footer{
         width: 100%;
         overflow: hidden;
@@ -1084,15 +1112,24 @@
         width: 100%;
         height: auto;
         display: flex;
-        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-between;
         .header-logo{
             margin-top: 20px;
             margin-left: 0px;
             width: 150px;
+            order: 1;
         }
         .search-container{
             width: 100%;
             margin: 20px 0px;
+            order: 3;
+        }
+        .account{
+            order: 2;
+            img{
+                margin-left: 20px;
+            }
         }
     }
     .banner-section{
@@ -1115,7 +1152,6 @@
     .movie-grid{
         width: 100%;
     }
-    
     .footer{
         width: 100%;
         overflow: hidden;
