@@ -283,7 +283,6 @@
         div{
             display: flex;
             justify-content: center;
-            /* flex-wrap: wrap; */
         }
         img{
             border-radius: 30px;
@@ -324,11 +323,17 @@
             padding-bottom: 20px;
         }
         p{
+            text-align: center;
             font-family: "Cal Sans", sans-serif;
             font-style: normal;
             font-size: 30px;
+            a{
+                color: black;
+                text-decoration: none;
+            }
         }
         nav{
+            text-align: center;
             img{
                 height: 50px;
                 width: auto;
@@ -480,7 +485,6 @@
         text-align: center;
     }
     .uudai-container {
-
         display: flex;
         justify-content: center;
         gap: 20px; /* Khoảng cách giữa các phần tử */
@@ -559,6 +563,10 @@
 
 /* ------------------------------ FDangChieu & FSapChieu ------------------------------ */
 /* ------------------------------ PhimDangChieu & PhimSapChieu ------------------------------ */
+.PhimDangChieu, .PhimSapChieu{
+    width: 90%;
+    margin: 0 auto;
+}
 .movie-grid {
     display: flex;
     flex-wrap: wrap;
@@ -815,12 +823,11 @@
         .info-collum{
             width: 25%;
             padding: 30px 5px;
-            text-align: center;
             h1{
                 font-size: 50px;
             }
             p{
-                font-size: 25px;
+                font-size: 30px;
             }
             nav{
                 img{
@@ -1130,6 +1137,11 @@
             img{
                 margin-left: 20px;
             }
+        }
+    }
+    .menu{
+        ul{
+            flex-direction: column;
         }
     }
     .banner-section{

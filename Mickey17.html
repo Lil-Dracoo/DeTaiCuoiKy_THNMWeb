@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mickey17</title>
+    <link rel="stylesheet" href="./css/Phim.css">
+    <link rel="stylesheet" href="">
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Cal+Sans&display=swap" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- ------------------------------ Header ------------------------------ -->
+        <section class="header">
+            <a href="index.html">
+                <img class="header-logo" src="./img/logo.png" alt="Logo Draco Cinema">
+            </a>
+            <div class="search-container">
+                <input type="text" placeholder="Tìm kiếm phim..." class="search-input"/>
+                <a href="index.html">
+                <button type="submit" class="search-icon"> 
+                    <img src="./img/Icon/magnifying-glass.png" alt="Search" style="width: 50px; height: 50px;">
+                </button></a>
+            </div>
+            <div class="account">
+                <a href="DangNhap.html">
+                <img src="./img/Icon/account.png" alt="Icon Account" style="width: 50px; height: 50px;">
+                <span>Đăng nhập</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- ------------------------------ Menu ------------------------------ -->
+        <section class="menu">
+            <ul>
+                <li><a href="index.html">Trang chủ</a></li>
+                <li>
+                    <div class="dropdown">
+                    <a> Phim <i class="fa-solid fa-circle-arrow-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="PhimDangChieu.html">Phim đang chiếu</a>
+                        <a href="PhimSapChieu.html">Phim sắp chiếu</a>
+                    </div>
+                    </div>
+                </li>
+                <li><a href="GiaVe.html">Giá vé</a></li>
+                <li><a href="UuDai.html">Ưu đãi</a></li>
+                <li><a href="LienHe.html">Liên hệ</a></li>
+                <li><a href="LabThucHanh.html">Lab</a></li>
+            </ul>
+        </section>
+
+        <!-- ------------------------------ Content ------------------------------ -->
+        <section class="content-container">
+            <div class="poster-details-wrapper">
+                <img src="./img/Poster/PosterM17.png" alt="Poster Mickey17">
+                <div class="details">
+                    <h1 id="movieTitle">Mickey 17</h1>
+                    <p><strong>Thời lượng:</strong> 137 phút</p>
+                    <p><strong>Diễn viên:</strong> Robert Pattinson, Naomi Ackie, Mark Ruffalo, Toni Collette, Steven Yeun</p>
+                    <p><strong>Mô tả:</strong> Lấy bối cảnh năm 2054, Mickey 17 kể về Mickey Barnes (Robert Pattinson), một "nhân viên thay thế" trong sứ mệnh thuộc địa hóa hành tinh băng giá Niflheim. 
+                        Nhiệm vụ của anh là thực hiện các công việc nguy hiểm với tỷ lệ tử vong cao; mỗi khi chết, cơ thể anh được tái tạo với ký ức còn nguyên vẹn. 
+                        Sau lần tử nạn thứ 17, Mickey trở về và phát hiện một phiên bản mới, Mickey 18, đã được tạo ra để thay thế mình. 
+                        Sự xuất hiện đồng thời của hai phiên bản dẫn đến những xung đột và đặt ra câu hỏi về bản chất con người và đạo đức của việc nhân bản.
+                    </p>
+                </div>
+            </div>
+
+            <div class="schedule">
+                <h2>Lịch chiếu</h2>
+                <button onclick="showBookingForm('10:00')">10:00</button>
+                <button onclick="showBookingForm('14:00')">14:00</button>
+                <button onclick="showBookingForm('18:00')">18:00</button>
+            </div>
+
+            <div class="booking-form" id="bookingForm" style="display: none;">
+                <h2>Đặt Vé - <span id="selectedTime"></span></h2>
+                <div class="form-group">
+                    <label>Chọn ghế:</label>
+                    <div class="seat-map" id="seatMap"></div>
+                </div>
+                <nav>
+                    <p>Tổng tiền: <span id="totalPrice">0</span> VND</p>
+                    <button onclick="bookTickets()">Đặt vé</button>
+                </nav>
+                
+                <div id="successSection" class="hidden">
+                    <hr><br>
+                    <div class="success"><i class="fa-solid fa-circle-check"></i> Đặt vé thành công!</div>
+                    <button onclick="generateInvoiceImage()">Xem chi tiết hóa đơn</button>
+                </div>
+                <div id="invoicePreview" class="hidden" style="margin-top: 20px;"></div>
+            </div>
+        </section>
+
+        <!-- ------------------------------ Footer ------------------------------ -->
+        <section class="footer">
+            <div class="info">
+            <div class="info-collum">
+                <h1>Giới thiệu</h1>
+                <p><a href="About.html">Về chúng tôi</a>></p>
+                <p><a>Thỏa thuận sử dụng</a></p>
+                <p><a>Quy chế hoạt động</a></p>
+                <p><a>Chính sách bảo mật</a></p>
+            </div>
+            <div class="info-collum">
+                <h1>Hỗ trợ</h1>
+                <p><a>Góp ý</a></p>
+                <p><a>Sale & Services</a></p>
+                <p><a>Tuyển dụng</a></p>
+                <p><a>Liên hệ: 1800 8386</a></p>
+            </div>
+            <div class="info-collum">
+                <h1>Đối tác</h1>
+                <nav>
+                <img src="./img/Footer/Momo.png" alt="logo Momo" style="padding: 0px 5px;">
+                <img src="./img/Footer/ViettelMoney.png" alt="logo ViettelMoney" >
+                <img src="./img/Footer/ZaloPay.png" alt="logo ZaloPay" style="border-radius: 10px;">
+                <br>
+                <img src="./img/Footer/Paypal.png" alt="logo Paypal">
+                <img src="./img/Footer/VNPay.png" alt="logo VNPay">
+                <img src="./img/Footer/Napas.png" alt="logo Napas">
+                </nav>
+            </div>
+            <div class="info-collum">
+                <div>
+                <img src="./img/logo.png" alt="Logo DracoCinema">
+                <br>
+                <a href="https://www.facebook.com/ducuong.133" class="footer-icon">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+                <a href="https://www.instagram.com/" class="footer-icon">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://tiktok.com/@dracooo133" class="footer-icon">
+                    <i class="fa-brands fa-tiktok"></i>
+                </a>
+                <a href="https://www.google.com/maps/place/Tr%C6%B0%E1%BB%9Dng+%C4%90%E1%BA%A1i+h%E1%BB%8Dc+C%C3%B4ng+ngh%E1%BB%87+S%C3%A0i+G%C3%B2n/@10.7379972,106.6752572,17z/data=!3m1!4b1!4m6!3m5!1s0x31752f62a90e5dbd:0x674d5126513db295!8m2!3d10.7379972!4d106.6778321!16s%2Fm%2F02x4g7t?entry=ttu&g_ep=EgoyMDI1MDQyOS4wIKXMDSoASAFQAw%3D%3D" class="footer-icon">
+                    <i class="fa-solid fa-location-dot"></i>
+                </a>
+                <br>
+                <img src="./img/Footer/BoCongThuong.png" alt="Bộ Công Thương">
+                </div>
+            </div>
+            </div>
+            <hr style="background-color: black; height: 2px; border: none;">
+            <div class="ThongTinSV">
+            <p>Họ tên: Lâm Dũ Cường </p>
+            <p>MSSV: DH52200423 </p>
+            <p>Lớp: D22_TH02 </p>
+            <p>Mail: dh52200423@student.stu.edu.vn </p>
+            <p>Nhóm 4 Thứ 2 Ca 1 </p>
+            </div>
+        </section>
+
+    </div>
+    <script src="./js/datve.js"></script>
+</body>
+</html>
