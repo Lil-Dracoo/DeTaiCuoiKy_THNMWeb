@@ -12,13 +12,13 @@
     </div>
     <script>
         var userData = {
-            "name":"Hoàng Đặng Diệp Lân",
+            "name":"Lâm Dũ Cường",
+            "studentid":"DH52200423",
             "age":20,
-            "email": "hlan9693@gmail.com",
+            "email": "ducuong133@gmail.com",
             "address":{
-                "city":"Ho Chi Minh",
-                "state":"NY",
-                "zipcode":"10001"
+                "city":"Thành phố Hồ Chí Minh",
+                "district":"Quận 8"
             }
         }
 
@@ -26,10 +26,10 @@
             var userInfoElement = document.getElementById('userInfo');
             userInfoElement.innerHTML =`
                 <p><strong>Name: </strong> ${data.name} </p>
+                <p><strong>Name: </strong> ${data.studentid} </p>
                 <p><strong>Age: </strong> ${data.age} </p>
                 <p><strong>Email: </strong> ${data.email} </p>
-                <p><strong>Address: </strong> ${data.address.city} </p>
-            `
+                <p><strong>Address: </strong>${data.address.district} ${data.address.city}</p>         `
         }
 
         displayUserInfo(userData)
