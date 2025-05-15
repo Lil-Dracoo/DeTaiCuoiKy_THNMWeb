@@ -4,8 +4,146 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Cal+Sans&display=swap" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 <body>
-    <p>Comming soon</p>
+    <div class="container">
+        <!-- ------------------------------ Header ------------------------------ -->
+        <section class="header">
+            <a href="index.html">
+                <img class="header-logo" src="./img/logo.png" alt="Logo Draco Cinema">
+            </a>
+            <div class="search-container">
+                <input type="text" placeholder="Tìm kiếm phim..." class="search-input"/>
+                <a href="index.html">
+                <button type="submit" class="search-icon"> 
+                    <img src="./img/Icon/magnifying-glass.png" alt="Search" style="width: 50px; height: 50px;">
+                </button></a>
+            </div>
+            <div class="account">
+                <a href="DangNhap.html">
+                    <img src="./img/Icon/account.png" alt="Icon Account" style="width: 50px; height: 50px;">
+                    <span>Đăng nhập</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- ------------------------------ Menu ------------------------------ -->
+        <section class="menu">
+            <ul>
+                <li><a href="index.html">Trang chủ</a></li>
+                <li>
+                    <div class="dropdown">
+                    <a> Phim <i class="fa-solid fa-circle-arrow-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="PhimDangChieu.html">Phim đang chiếu</a>
+                        <a href="PhimSapChieu.html">Phim sắp chiếu</a>
+                    </div>
+                    </div>
+                </li>
+                <li><a href="GiaVe.html">Giá vé</a></li>
+                <li><a href="UuDai.html">Ưu đãi</a></li>
+                <li><a href="LienHe.html">Liên hệ</a></li>
+                <li><a href="LabThucHanh.html">Lab</a></li>
+            </ul>
+        </section>
+
+        <!-- ------------------------------ About ------------------------------ -->
+        <div class="about">
+            <div class="about-container">
+                <h1>About us</h1>
+                <p>Chào mừng bạn đến với DracoCinema - nơi trải nghiệm điện ảnh đỉnh cao! 🎬✨</p><br>
+                <p>Tại DracoCinema, chúng tôi tự hào mang đến cho bạn những bộ phim bom tấn mới nhất, 
+                    những tác phẩm kinh điển và những bộ phim nghệ thuật độc đáo từ khắp nơi trên thế giới. 
+                    Với hệ thống âm thanh và hình ảnh hiện đại, không gian thoải mái và dịch vụ tận tình, 
+                    chúng tôi cam kết mang đến cho bạn những giây phút giải trí tuyệt vời nhất.
+                </p><br>
+                <p>Hãy đến và trải nghiệm sự khác biệt tại DracoCinema - nơi mà mỗi bộ phim là một hành trình kỳ diệu!</p><br>
+                <p><strong>Địa chỉ:</strong> 180 Cao Lỗ, Phường 4, Quận 8, TPHCM</p>
+                <p><strong>Liên hệ:</strong> 1800 8386</p><br><br><br><hr><br><br><br>
+                <h2>Các chức năng nổi bật của trang web</h2>
+                <p>- Tương thích với nhiều thiết bị</p>
+                <p>- Giao diện đơn giản dễ thao tác</p>
+                <p>- Tự động trình chiếu các banner</p>
+                <p>- Có thể chuyển đổi giữa phim đang chiếu và sắp chiếu trong homepage thông qua iframe</p>
+                <p>- Tự động cập nhật độ cao iframe khi responsive khi xem bằng LiveServer hoặc link</p>
+                <p>- Có thể xem chi tiết phim đang chiếu, xem trailer</p>
+                <p>- Chọn được suất chiếu, chọn ghế khi đặt vé, tạo và tải được ảnh hóa đơn</p>
+                <p>- Popup nội dung của các ưu đãi</p>
+                <p>- Nút cuộn lên đầu trang và ẩn khi đã ở vị trí đầu trang</p>
+            </div>
+        </div>
+
+        <!-- ------------------------------ Footer ------------------------------ -->
+        <section class="footer">
+            <div class="info">
+                <div class="info-collum">
+                    <h1>Giới thiệu</h1>
+                    <p><a style="color: white;">Về chúng tôi</a></p>
+                    <p><a>Thỏa thuận sử dụng</a></p>
+                    <p><a>Quy chế hoạt động</a></p>
+                    <p><a>Chính sách bảo mật</a></p>
+                </div>
+                <div class="info-collum">
+                    <h1>Hỗ trợ</h1>
+                    <p><a>Góp ý</a></p>
+                    <p><a>Sale & Services</a></p>
+                    <p><a>Tuyển dụng</a></p>
+                    <p><a>Liên hệ: 1800 8386</a></p>
+                </div>
+                <div class="info-collum">
+                    <h1>Đối tác</h1>
+                    <nav>
+                        <img src="./img/Footer/Momo.png" alt="logo Momo" style="padding: 0px 5px;">
+                        <img src="./img/Footer/ViettelMoney.png" alt="logo ViettelMoney" >
+                        <img src="./img/Footer/ZaloPay.png" alt="logo ZaloPay" style="border-radius: 10px;">
+                    <br>
+                        <img src="./img/Footer/Paypal.png" alt="logo Paypal">
+                        <img src="./img/Footer/VNPay.png" alt="logo VNPay">
+                        <img src="./img/Footer/Napas.png" alt="logo Napas">
+                    </nav>
+                </div>
+                <div class="info-collum">
+                    <div>
+                        <img src="./img/logo.png" alt="Logo DracoCinema">
+                        <br>
+                        <a href="https://www.facebook.com/ducuong.133" class="footer-icon">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+                        <a href="https://www.instagram.com/" class="footer-icon">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="https://tiktok.com/@dracooo133" class="footer-icon">
+                            <i class="fa-brands fa-tiktok"></i>
+                        </a>
+                        <a href="https://www.google.com/maps/place/Tr%C6%B0%E1%BB%9Dng+%C4%90%E1%BA%A1i+h%E1%BB%8Dc+C%C3%B4ng+ngh%E1%BB%87+S%C3%A0i+G%C3%B2n/@10.7379972,106.6752572,17z/data=!3m1!4b1!4m6!3m5!1s0x31752f62a90e5dbd:0x674d5126513db295!8m2!3d10.7379972!4d106.6778321!16s%2Fm%2F02x4g7t?entry=ttu&g_ep=EgoyMDI1MDQyOS4wIKXMDSoASAFQAw%3D%3D" class="footer-icon">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </a>
+                        <br>
+                        <img src="./img/Footer/BoCongThuong.png" alt="Bộ Công Thương">
+                    </div>
+                </div>
+            </div>
+            <hr style="background-color: black; height: 2px; border: none;">
+            <div class="ThongTinSV">
+                <p>Họ tên: Lâm Dũ Cường </p>
+                <p>MSSV: DH52200423 </p>
+                <p>Lớp: D22_TH02 </p>
+                <p>Mail: dh52200423@student.stu.edu.vn </p>
+                <p>Nhóm 4 Thứ 2 Ca 1 </p>
+            </div>
+        </section>
+        <button id="back-to-top" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+      </button>
+    </div>
 </body>
 </html>

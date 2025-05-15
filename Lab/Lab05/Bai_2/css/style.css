@@ -5,6 +5,14 @@ body {
 	font-smoothing: antialiased;
 }
 
+/*Begin Cau3 */
+body, 
+h1, h2, h3, h4, h5, h6, 
+p{
+	font-family: "Cairo", sans-serif;
+}
+/* End Cau3 */
+
 h1,
 h2,
 h3,
@@ -2578,7 +2586,7 @@ ol {
   Footer
 -----------------------*/
 
-.footer {
+/* .footer {
 	background: #F3F6FA;
 	padding-top: 70px;
 	padding-bottom: 0;
@@ -2706,7 +2714,7 @@ ol {
 
 .footer__copyright__payment {
 	float: right;
-}
+} */
 
 /*---------------------
   Contact
