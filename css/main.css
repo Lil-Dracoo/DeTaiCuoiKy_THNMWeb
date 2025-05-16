@@ -990,6 +990,9 @@
             order: 3;
         }
     }
+    .giave{
+        padding: 50px 0px;
+    }
     .footer{
         .info-collum{
             width: 50%;
